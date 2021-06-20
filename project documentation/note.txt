@@ -1,0 +1,23 @@
+Names of python packages need to install..
+
+pip install flask #ffor flask framework
+pip install chatterbot==1.0.1 #for chatbot
+pip install requests
+pip install pytz
+python -m venv venvname
+
+how  to build Chatbot 
+https://www.youtube.com/watch?v=n7MpWHi8T7Q
+
+Name of sites required for building Chatbox
+https://youtu.be/EW9I1HqaKwk #full video tutorial
+https://fontawesome.com/v4.7.0/icons/
+https://www.bootstrapcdn.com/
+https://www.youtube.com/watch?v=ZzntTdwrOyc
+https://google.github.io/material-design-icons/
+https://codinginfinite.com/chatbot-in-python-flask-tutorial/
+
+Make a floating button
+https://youtu.be/u5hx_YtqylA
+
+https://www.youtube.com/watch?v=ZzntTdwrOyc
