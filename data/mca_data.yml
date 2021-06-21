@@ -5,15 +5,15 @@ categories:
 conversations:
 # initialize conversation
 - - hello
-  - Hello... Welcome to GESRHSCOE..!
+  - Hello...<br>Welcome to GESRHSCOE..!
 - - hi there
-  - Hello... Welcome to GESRHSCOE..!
+  - Hi...<br>Welcome to GESRHSCOE..!
 - - hey
-  - Hello... Welcome to GESRHSCOE..!
+  - Hey...<br>Welcome to GESRHSCOE..!
 - - hi
-  - Hello... Welcome to GESRHSCOE..!
-- - hello
-  - Hello... Welcome to GESRHSCOE..!
+  - Hiii...<br>Welcome to GESRHSCOE..!
+- - hello there
+  - Hello...<br>Welcome to GESRHSCOE..!
   - Hi there, What can I do for you?
 - - what can you do for me?
   - Ask me something about MCA
@@ -24,12 +24,16 @@ conversations:
 - - What is your name
   - My name is MCABot...
 - - Ok
-  - Help us to know about you.. <a href="https://forms.gle/fJT9rX4CxSRPtbLf9">Please Click here..</a>
+  - Help us to know about you.. <a href="https://forms.gle/fJT9rX4CxSRPtbLf9" target="_blank">Please Click here..</a>
   - do you need more information? you can ask without any hesitation...
   - bye
   - bye..<br>Have a great day...  
 - - Thank you
-  - Most Welcome..<br>Help us to know about you.. <a href="https://forms.gle/fJT9rX4CxSRPtbLf9">Please Click here..</a>
+  - Most Welcome..<br>Help us to know about you.. <a href="https://forms.gle/fJT9rX4CxSRPtbLf9" target="_blank">Please Click here..</a>
+- - Thanks
+  - Most Welcome..<br>Help us to know about you <a href="https://forms.gle/fJT9rX4CxSRPtbLf9" target="_blank">Please Click here..</a>
+- - Tysm
+  - Most Welcome..<br>Help us to know about you.. <a href="https://forms.gle/fJT9rX4CxSRPtbLf9" target="_blank">Please Click here..</a>
 # conversation About college..
 - - what is GESRHSCOE 
   - GESRHSCOE is Gokhale Education Society's R.H Sapat College of Engineering which is probably the best Engineering college of Nashik..
@@ -38,11 +42,13 @@ conversations:
 - - Tell me about your college
   - Gokhale Education Society's R.H Sapat College of Engineering is best college of nashik which is ISO 9001:2015 Certified and NAAC Accredited with B++ Grade..
 - - Address 
-  - Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005.
+  - Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005.. <br><a href="https://goo.gl/maps/GqhMui5VhQ4YLrcj9" target="_blank">Click Here for location..</a>
 - - Address of your college 
-  - Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005.
+  - Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005.. <br><a href="https://goo.gl/maps/GqhMui5VhQ4YLrcj9" target="_blank">Click Here for location..</a>
 - - where is your college located
-  - College is located at, Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005.
+  - College is located at, Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005... <br><a href="https://goo.gl/maps/GqhMui5VhQ4YLrcj9" target="_blank">Click Here for location..</a>
+- - location of your college
+  - College is located at, Prin. T. A. Kulkarni Vidyanagar, College Road, Nashik 422005... <br><a href="https://goo.gl/maps/GqhMui5VhQ4YLrcj9" target="_blank">Click Here for location..</a>
 - - Contact
   - phone no is 0253-2570106 and Email ID is principal@ges-coengg.org
 - - Contact details
@@ -50,19 +56,35 @@ conversations:
 - - Contact of your college?
   - phone no is 0253-2570106 and Email ID is principal@ges-coengg.org
 # MCA related questions
+- - Syllabus
+  - Here is Syllabus of MCA Engineering.. <a href="https://mca.ges-coengg.org/wp-content/uploads/2016/01/MCA_Engg_2013_Syllabus_5-9-15_revised.pdf" target="_blank">Click here</a>
+- - What are the achievements of mca department
+  - You will see achievements of mca here...<br><a href="https://mca.ges-coengg.org/2016/06/04/achievements/" target="page">Click here..</a>
+- - achievements of mca 
+  - You will see achievements of mca here...<br><a href="https://mca.ges-coengg.org/2016/06/04/achievements/" target="page">Click here..</a>
+- - Syllabus of MCA engineering
+  - Here is syllabus of MCA Engineering.. <a href="https://mca.ges-coengg.org/wp-content/uploads/2016/01/MCA_Engg_2013_Syllabus_5-9-15_revised.pdf" target="_blank">Click here</a>
+- - timetable of mca 
+  - <a href="https://mca.ges-coengg.org/time-table/" target="page">Click Here for time table</a>
+- - timetable
+  - <a href="https://mca.ges-coengg.org/time-table/" target="page">Click Here for time table</a>
+- - timing of lab sessions 
+  - <a href="https://mca.ges-coengg.org/laboratory/" target="page">Click Here for Lab Sessions</a>
+- - lab lectures
+  - <a href="https://mca.ges-coengg.org/laboratory/" target="page">Click Here for Lab Sessions</a>
+- - course details
+  - <a href="https://mca.ges-coengg.org/course-structure/" target="page">Click Here for course details </a>
+- - course structure
+  - <a href="https://mca.ges-coengg.org/course-structure/" target="page">Click Here for course details </a>
+- - tell me about mca events
+  - MCA department holds a Technical fun event named as "INNOVISION".. You can see here all the precious memories of previous years INNOVISION event..<br><a href="https://mca.ges-coengg.org/category/events/" target="page">Click Here for MCA Events.. </a>
+- - events
+  - MCA department holds a Technical fun event named as "INNOVISION".. You can see here all the precious memories of previous years INNOVISION event..<br><a href="https://mca.ges-coengg.org/category/events/" target="page">Click Here for MCA Events.. </a>
+- - events of mca department
+  - MCA department holds a Technical fun event named as "INNOVISION".. You can see here all the precious memories of previous years INNOVISION event..<br><a href="https://mca.ges-coengg.org/category/events/" target="page">Click Here for MCA Events.. </a>
 
-- - Syllabus of MCA
-  - Here is syllabus of MCA Engineering.. <a href="https://mca.ges-coengg.org/wp-content/uploads/2016/01/MCA_Engg_2013_Syllabus_5-9-15_revised.pdf">Click here</a>
-- - timetable of mca / timetable
-  - <a href="https://mca.ges-coengg.org/time-table/">Click Here for time table</a>
-- - timing of lab sessions / lab lectures
-  - <a href="https://mca.ges-coengg.org/laboratory/">Click Here for Lab Sessions </a>
-- - course details / course structure
-  - <a href="https://mca.ges-coengg.org/course-structure/">Click Here for course details </a>
-- - tell me about mca events / events
-  - <a href="https://mca.ges-coengg.org/category/events/">Click Here for MCA Events.. </a>
 - - How many seats are available
-  - Total 60 seats are available in MCA department. You can get admission regarding updates here... <a href="https://ges-coengg.org/pg-mca-engg/">Click here..</a>
+  - Total 60 seats are available in MCA department. You can get admission regarding updates here... <a href="https://ges-coengg.org/pg-mca-engg/" target="page">Click here..</a>
 - - Tell Me about MCA
   - Ask me something about MCA
 - - What does MCA stands for
@@ -75,9 +97,9 @@ conversations:
   - MCA is full time course
 - - total semesters in MCA 
   - 5 Semesters and 1 semester for internship and project,
-    that is 5+1=6 <a href="https://mca.ges-coengg.org/course-structure/">Click Here for course details </a>
+    that is 5+1=6 <br><a href="https://mca.ges-coengg.org/course-structure/" target="page">Click Here for course details </a>
 - - how many years of MCA
-  - MCA is full time course of 3 years. <a href="https://mca.ges-coengg.org/course-structure/">Click Here for course details </a>
+  - MCA is full time course of 3 years.. <br><a href="https://mca.ges-coengg.org/course-structure/" target="page">Click Here for course details </a>
 - - how many teaching staff is there
   - there are total 7 teaching staff in MCA.
 - - HOD of MCA department
@@ -90,15 +112,14 @@ conversations:
   - Mrs. P.A. Chaudhari,<br>
     Mrs. R.C. Samant,<br>
     Mrs. T.U. Ahirrao,<br>
-    Mrs. G.G Raut<br>
+    Mrs. G.G. Raut<br>
     Mrs. P.N. Deshmukh,<br>
     Mrs. N.V. Bhatambarekar,<br>
     Mr. Sakharam Kolpe.<br>
-    <a href="https://mca.ges-coengg.org/people/">Click here for more information..</a>
-
+    <a href="https://mca.ges-coengg.org/people/" target="page">Click here for more information..</a>
 - - admission process of MCA
-  - You can get admission regarding updates here... <a href="https://ges-coengg.org/pg-mca-engg/">Click here..</a>
+  - You can get admission regarding updates here... <a href="https://ges-coengg.org/pg-mca-engg/" target="page">Click here..</a>
 - - how to get admission in MCA?
-  - You can easily get admission in MCA. But, first of all you have to passout MCA-CET..<br> <a href="https://info.mahacet.org/cet2020/MCA2020/">Click here for MAH-MCA CET</a>
+  - You can easily get admission in MCA. But, first of all you have to passout MCA-CET..<br> <a href="https://info.mahacet.org/cet2020/MCA2020/" target="_blank">Click here for MAH-MCA CET</a>
 - - what is admission process for mca?
-  - Admission process is quite easy for MCA.<br>But, first of all you have to passout MCA-CET..<br> <a href="https://info.mahacet.org/cet2020/MCA2020/">Click here for MAH-MCA CET</a>
+  - Admission process is quite easy for MCA.<br>But, first of all you have to passout MCA-CET..<br> <a href="https://info.mahacet.org/cet2020/MCA2020/" target="_blank">Click here for MAH-MCA CET</a>

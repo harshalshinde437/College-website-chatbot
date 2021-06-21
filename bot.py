@@ -10,7 +10,7 @@ english_bot = ChatBot("Chatterbot",storage_adapter="chatterbot.storage.SQLStorag
 
 trainer = ChatterBotCorpusTrainer(english_bot)
 trainer.train("chatterbot.corpus.english")
-trainer.train("D:\\major project (TYMCA)\\data\\mca_data.yml") #data will store here
+trainer.train("data") #data will store here
 
 @app.route("/")
 def index():
