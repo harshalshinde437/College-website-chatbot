@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>MCA Chatbot</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="CssForIndexPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+</head>
+
+<body>
+    <input type="checkbox" id="click">
+    <div class="label">
+    <label for="click">
+        <i class="fa fa-paper-plane"></i>
+        <i class="fa fa-times"></i>
+    </label>
+</div>
+    <div class="wrapper">
+        <div class="head-text">MCA Chatbot - Let's Chat</s>
+            
+        </div>
+            <div class="chat-box">
+            <div class="desc-text">Click here for more details : <i class="fa fa-hand-o-right"></i>
+                <input type="checkbox" id="click1">
+                <div class="google_form_btn">
+                <label for ="click1" class="info">
+                    <i class="fa fa-commenting"></i>
+                    <i class="fa fa-times"></i>
+                </label>
+                </div>
+                <div class="form1">
+                    <form action="#">
+                    <div class="google_form">
+                        <!-- <a href="https://forms.gle/fJT9rX4CxSRPtbLf9"></a> -->
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMgP2F6k0grq8Mq0r-C7UUa2UW_p92Zumc0J_rDdCjWBouSA/viewform?embedded=true" width="350" height="550" frameborder="1" radius="40" marginheight="400" marginwidth="250">Loading…</iframe>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <!-- <form action ="#" class="form1">
+                <div class="google_form">
+                    <a href="https://forms.gle/fJT9rX4CxSRPtbLf9"></a>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMgP2F6k0grq8Mq0r-C7UUa2UW_p92Zumc0J_rDdCjWBouSA/viewform?embedded=true" width="350" height="550" frameborder="1" radius="40" marginheight="400" marginwidth="250">Loading…</iframe>
+                </div>
+            </form> -->
+            <div class="form2">
+            <form action="#">
+            <div class="Chat-page" id="chatbox">
+                <div class="field">
+                    <!-- msg from bot side -->
+                    <div class="received-msg">
+                        <!-- BotText=received-msg-inbox -->
+                        <div class="received-msg-inbox"><p>Hello There! This is MCA chatbot.</p></div>
+                    </div>
+                    <!-- user response -->
+                    <div class="sent-msg">
+                        <!-- userText = sent-msg-inbox -->
+                        <!-- <div class="sent-msg-inbox">Hello</div> -->
+                    </div>
+                </div>
+             </div>
+            </form>
+        </div>
+                <div class="msg-bottom">
+                    
+                    <div class="input-group" id="userInput">
+                        <input class="form-control" id="textInput" type="text" name="msg" placeholder="Write Message..." required>
+                        <div class="input-group-append">
+                            <span class="input-group-text" input id="buttonInput" type="submit"><i class="fa fa-paper-plane"></i></span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+                    
+                    
+    </div>
+                <script>
+                    function getBotResponse(){
+                        var rawText = $("#textInput").val();
+                        var userHtml = '<p class = "sent-msg-inbox">'+ rawText +'</p><br></br>';
+                        $("#textInput").val("");
+                        $("#chatbox").append(userHtml);
+                        document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+                    $.get("/get", {msg:rawText }).done(function(data) {
+                            var botHtml = '<p class ="received-msg-inbox"><span>' + data + '</span></p>';
+                            $("#chatbox").append(botHtml);
+                            document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+                        });
+                    }
+                    $("#textInput").keypress(function(e) {
+                        if(e.which == 13) {
+                            getBotResponse();
+                        }
+                    });
+                    $("#buttonInput").click(function() {
+                        getBotResponse();
+                    })
+                </script>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap')
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    overflow: hidden;
+    background: #f2f2f2;
+}
+/* code for main button */
+#click{display: none;}
+.label{
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    height: 60px;
+    width: 60px;
+    background: -webkit-linear-gradient(right, #9100f1, #cea8e7);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+.label i{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+.label i.fa-times{
+    opacity: 0;
+    pointer-events: none;
+}
+#click:checked ~ .label i.fa-times{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ .label i.fa-paper-plane{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+/* code for chatbot window */
+.wrapper{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    max-width: 400px;
+    /* max-height: 800px; */
+    background: #e0ddec;
+    border-radius: 15px;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.294);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#click:checked ~ .wrapper{
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: auto;
+}
+/* code for title of MCA Chatbot - Let's chat section */
+.wrapper .head-text{
+    line-height: 60px;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 0 20px;
+    font-weight:500;
+    font-size: 20px;
+    background: -webkit-linear-gradient(left, #9100f1, #cea8e7);
+}
+
+/* This code is for google form */
+#click1{display: none;}
+.google_form_btn i{
+    position:absolute;
+    right: 1px !important;
+    top: 26px !important;
+    color:#7c00cf;
+    font-size: 25px;
+    cursor:pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+.google_form_btn i.fa-times{
+    opacity: 0;
+    pointer-events: none;
+}
+.google_form_btn i.fa-commenting{
+    opacity: 1;
+    pointer-events: auto;
+}
+#click1:checked ~ .google_form_btn i.fa-commenting{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+#click1:checked ~ .google_form_btn i.fa-times{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+/* css for google form */
+
+/* .form1{
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+} */
+
+.form1{
+    opacity: 0;
+    height: 5px;
+    /* bottom: 85px; */
+    pointer-events: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
+}
+ 
+#click1:checked ~ .form1{
+    opacity: 1;
+    visibility: visible;
+    /* bottom: 85px; */
+    pointer-events:auto;
+    /* height: 60px; */
+    width: 100%;
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
+}
+
+.field .received-msg{
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: auto;
+}
+#click1:checked ~ .field .received-msg{
+    opacity: 0;
+    visibility:collapse;
+    pointer-events: none;
+}
+
+
+.chat-box .desc-text .info{
+    position:absolute;
+    right: 25px;
+    top: 63px;
+    color:#7c00cf;
+    font-size: 25px;
+}
+/* #click1:checked ~ .info{
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: all; */
+/* } */
+
+/* .iframe{
+    border-radius: 40%;
+} */
+
+.wrapper .chat-box{
+    padding: 20px;
+    width: 100%;
+}
+
+.chat-box .desc-text{
+    color: #000000;
+    text-align: left;
+    line-height:15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.chat-box form{
+    height: auto;
+    max-height: 500px;
+    overflow-y:auto;
+    padding: 10px 10px;
+    margin:5px 0;
+    border: none !important;
+    /* border-radius: 25px; */
+    /* border: 1px solid rgb(1, 16, 149); */
+}
+
+.chat-box form .chat-page{
+    height: 60px;
+    width: 100%;
+    margin-top: 20px; 
+     
+}
+
+.chat-box form .field{
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.msg-bottom
+{
+    position: relative;
+    /* background: -webkit-linear-gradient(right #b24545, #fad842); */
+}
+.input-group{
+    float: center;
+    margin-top:13px;
+    margin-right: 20px;
+    outline: none !important;
+    border-radius: 20px;
+    width: 100% !important;
+    background-color: #fff;
+}
+
+.form-control{
+    border: none !important;
+    border-radius: 20px !important;
+    color: #7e00d3(17, 0, 255);
+    font-weight: 500
+}
+.input-group-text{
+    background: transparent !important;
+    border-radius: 0 20px;
+    border: none !important ;
+    /* background-color: rgb(197, 114, 32); */
+}
+.input-group-text .fa{
+    color: #9100f1;
+}
+
+/* .sent-chats
+{
+    overflow: hidden;
+    margin: 26px 20px;
+} */
+.sent-msg
+{
+    display: inline;
+    float: left;
+    width: 56%;
+    padding: 5px 10px 5px 10px;
+    margin-left: 45%;
+}
+.sent-msg-inbox p
+{
+    background: #9656df none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    margin: 0;
+    /* color:#fff; */
+    padding: 15px 10px 15px 12px;
+    width: 100%;
+}
+
+.sent-msg-inbox
+{
+    position:relative;
+    background:  #9656df none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14.5px;
+    font-weight: 650;
+    margin-bottom: 15px;
+    margin-left: 45%
+    color #fff;
+    padding: 10px 15px 10px 15px;
+    width: auto;
+    height: 5%;
+    text-align: right;
+    float: right;
+}
+
+.received-msg
+{
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    vertical-align: top;
+    width: 57%;
+}
+.received-msg-inbox p
+{
+    background: #fff none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #9100f1;
+    font-size: 14px;
+    margin: 0;
+    /* padding: 5px 10px 5px 12px; */
+    /* width: auto; */
+}
+.received-msg-inbox
+{
+    position:relative;
+    background: #fff none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #9100f1;
+    font-size: 14px;
+    font-weight: 700;
+    /* margin: 0; */
+    padding: 10px 15px 10px 15px;
+    height: 5%;
+    width: auto;
+    text-align:left;
+    margin-right: 25%;
+    float: left;
+}
+</style>
+</html>
